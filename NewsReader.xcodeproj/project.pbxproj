@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830C31D41F2AE21200EE5291 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830C31D31F2AE21200EE5291 /* DetailViewController.swift */; };
 		837D9D761F2A1BE800CE59A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837D9D751F2A1BE800CE59A5 /* AppDelegate.swift */; };
 		837D9D7B1F2A1BE800CE59A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837D9D791F2A1BE800CE59A5 /* Main.storyboard */; };
 		837D9D7D1F2A1BE800CE59A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837D9D7C1F2A1BE800CE59A5 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830C31D31F2AE21200EE5291 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		837D9D721F2A1BE800CE59A5 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D9D751F2A1BE800CE59A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		837D9D7A1F2A1BE800CE59A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				837D9D751F2A1BE800CE59A5 /* AppDelegate.swift */,
 				837D9D791F2A1BE800CE59A5 /* Main.storyboard */,
 				837D9D871F2A1CB100CE59A5 /* ListViewController.swift */,
+				830C31D31F2AE21200EE5291 /* DetailViewController.swift */,
 				837D9D891F2A297000CE59A5 /* Item.swift */,
 				837D9D7C1F2A1BE800CE59A5 /* Assets.xcassets */,
 				837D9D7E1F2A1BE800CE59A5 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				837D9D881F2A1CB100CE59A5 /* ListViewController.swift in Sources */,
 				837D9D8A1F2A297000CE59A5 /* Item.swift in Sources */,
 				837D9D761F2A1BE800CE59A5 /* AppDelegate.swift in Sources */,
+				830C31D41F2AE21200EE5291 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 				837D9D861F2A1BE800CE59A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

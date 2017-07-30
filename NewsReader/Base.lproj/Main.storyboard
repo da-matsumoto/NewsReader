@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jU8-2a-FYH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UH0-bc-uXA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--一覧-->
         <scene sceneID="sRl-ch-Ee0">
             <objects>
                 <tableViewController id="jU8-2a-FYH" customClass="ListViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="af5-vR-TDi" kind="show" id="Z6a-c6-yns"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -41,10 +44,62 @@
                             <outlet property="delegate" destination="jU8-2a-FYH" id="tFu-J6-3qf"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="一覧" id="Jpo-ol-hT1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="op8-ck-cw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-19" y="80"/>
+            <point key="canvasLocation" x="919.20000000000005" y="79.610194902548727"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="BoI-Cx-7nP">
+            <objects>
+                <viewController id="af5-vR-TDi" customClass="DetailViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ke9-Cx-K8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="XkY-Ic-Z7a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a4q-t6-Lpn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWT-R3-qFg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fWT-R3-qFg" firstAttribute="bottom" secondItem="XkY-Ic-Z7a" secondAttribute="top" id="Gm6-6y-0nA"/>
+                            <constraint firstAttribute="trailing" secondItem="fWT-R3-qFg" secondAttribute="trailing" id="ZNm-z2-rUi"/>
+                            <constraint firstItem="fWT-R3-qFg" firstAttribute="top" secondItem="a4q-t6-Lpn" secondAttribute="top" id="moI-Dg-soB"/>
+                            <constraint firstItem="fWT-R3-qFg" firstAttribute="leading" secondItem="a4q-t6-Lpn" secondAttribute="leading" id="rGZ-Ws-obj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="fWT-R3-qFg" id="5am-eG-DBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVN-Wz-mBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="79.610194902548727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1RH-cq-ba9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UH0-bc-uXA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wM1-f5-P17">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jU8-2a-FYH" kind="relationship" relationship="rootViewController" id="CNc-bz-8gM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5O-BM-FeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="79.610194902548727"/>
         </scene>
     </scenes>
 </document>
